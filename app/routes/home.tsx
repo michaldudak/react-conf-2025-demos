@@ -9,6 +9,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 const demos = [
+  "calendar",
   "dialogs",
   "menu-interactions",
   "morphing-toolbar",
@@ -30,7 +31,7 @@ export default function Home() {
     <main className="pt-16 p-4 container mx-auto max-w-2xl">
       <h1 className="text-3xl mb-6">Component Demos</h1>
 
-      <ul className="space-y-2 list-disc pl-5">
+      <ul className="space-y-2 list-none pl-5">
         {demos.map((slug) => (
           <li key={slug}>
             <Link className="text-blue-600 hover:underline" to={`/demos/${slug}`}>

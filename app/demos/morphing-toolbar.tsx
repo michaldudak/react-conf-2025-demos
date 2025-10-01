@@ -87,12 +87,7 @@ function HistoryPanel() {
       <ol>
         <li>
           <Avatar.Root className={styles.Avatar}>
-            <Avatar.Image
-              src="/md.jpg"
-              width="48"
-              height="48"
-              className={styles.AvatarImage}
-            />
+            <Avatar.Image src="/md.jpg" width="48" height="48" className={styles.AvatarImage} />
           </Avatar.Root>
           <p>
             <span className={styles.UserName}>Michał Dudak</span> created this document{' '}
@@ -101,12 +96,7 @@ function HistoryPanel() {
         </li>
         <li>
           <Avatar.Root className={styles.Avatar}>
-            <Avatar.Image
-              src="/ct.jpg"
-              width="48"
-              height="48"
-              className={styles.AvatarImage}
-            />
+            <Avatar.Image src="/ct.jpg" width="48" height="48" className={styles.AvatarImage} />
           </Avatar.Root>
           <p>
             <span className={styles.UserName}>Colm Tuite</span> approved{' '}

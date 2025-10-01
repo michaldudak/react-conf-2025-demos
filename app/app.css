@@ -26,7 +26,6 @@
 
 @import './breakpoints.css';
 
-
 /* Handy link to the default Tailwind theme:
 /* https://github.com/tailwindlabs/tailwindcss/blob/next/packages/tailwindcss/theme.css */
 
@@ -190,8 +189,8 @@
   }
 }
 
-
-body, html {
+body,
+html {
   /* iOS overscroll background */
   background-color: var(--color-content);
   color: var(--color-foreground);
@@ -207,4 +206,8 @@ body {
   font-synthesis: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
