@@ -88,7 +88,7 @@ function HistoryPanel() {
         <li>
           <Avatar.Root className={styles.Avatar}>
             <Avatar.Image
-              src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?w=128&h=128&dpr=2&q=80"
+              src="/md.jpg"
               width="48"
               height="48"
               className={styles.AvatarImage}
@@ -102,7 +102,7 @@ function HistoryPanel() {
         <li>
           <Avatar.Root className={styles.Avatar}>
             <Avatar.Image
-              src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?w=128&h=128&dpr=2&q=80"
+              src="/ct.jpg"
               width="48"
               height="48"
               className={styles.AvatarImage}
