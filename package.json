@@ -9,6 +9,8 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@base-ui-components/react": "https://pkg.pr.new/mui/base-ui/@base-ui-components/react@a5f4cb6",
+    "@base-ui-components/utils": "https://pkg.pr.new/mui/base-ui/@base-ui-components/utils@a5f4cb6",
     "@react-router/node": "^7.9.2",
     "@react-router/serve": "^7.9.2",
     "isbot": "^5.1.31",
