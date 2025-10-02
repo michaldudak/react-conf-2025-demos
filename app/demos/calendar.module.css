@@ -35,25 +35,6 @@
   grid-template-rows: repeat(24, 1fr);
 }
 
-.Positioner {
-  z-index: 20;
-  --easing: cubic-bezier(0.22, 1, 0.36, 1);
-  --animation-duration: 0.35s;
-
-  width: var(--positioner-width);
-  height: var(--positioner-height);
-  max-width: var(--available-width);
-
-  transition-property: top, left, right, bottom, transform;
-  transition-timing-function: var(--easing);
-  transition-duration: var(--animation-duration);
-
-  /* Disable transitions when data-instant is set (used for the initial positioning of the popup) */
-  &[data-instant] {
-    transition: none;
-  }
-}
-
 .Event {
   z-index: 10;
   position: relative;
@@ -86,6 +67,25 @@
   }
 }
 
+.Positioner {
+  z-index: 20;
+  --easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --animation-duration: 0.35s;
+
+  width: var(--positioner-width);
+  height: var(--positioner-height);
+  max-width: var(--available-width);
+
+  transition-property: top, left, right, bottom, transform;
+  transition-timing-function: var(--easing);
+  transition-duration: var(--animation-duration);
+
+  /* Disable transitions when data-instant is set (used for the initial positioning of the popup) */
+  &[data-instant] {
+    transition: none;
+  }
+}
+
 .EventDetails {
   box-sizing: border-box;
   padding: 1rem 1.5rem 1.5rem;
@@ -94,9 +94,12 @@
   color: var(--color-gray-900);
   transform-origin: var(--transform-origin);
   z-index: 20;
-  transition:
-    transform 150ms,
-    opacity 150ms;
+  transition-property: width, height, transform, opacity;
+  transition-timing-function: ease-out;
+  transition-duration: 150ms;
+
+  width: var(--popup-width, auto);
+  height: var(--popup-height, auto);
   min-width: 350px;
 
   &[data-starting-style],
