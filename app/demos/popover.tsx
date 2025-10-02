@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Popover } from '@base-ui-components/react/popover';
+import { Frame } from '../shared/Frame';
 import styles from './popover.module.css';
-import { Frame } from './shared/shared';
 
 export default function PopoverDemo() {
   return (

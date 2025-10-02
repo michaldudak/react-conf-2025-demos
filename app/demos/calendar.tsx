@@ -1,8 +1,8 @@
+import * as React from 'react';
 import { Popover } from '@base-ui-components/react';
-import styles from './calendar.module.css';
 import { eventPopover, type EventData } from './calendar-shared';
 import { Ellipsis, X } from 'lucide-react';
-import React from 'react';
+import styles from './calendar.module.css';
 
 const events: EventData[] = [
   {

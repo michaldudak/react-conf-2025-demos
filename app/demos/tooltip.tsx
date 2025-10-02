@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Tooltip } from '@base-ui-components/react/tooltip';
+import { Frame } from '../shared/Frame';
 import styles from './tooltip.module.css';
-import { Frame } from './shared/shared';
 
 export default function TooltipDemo() {
   return (

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NumberField } from '@base-ui-components/react/number-field';
+import { Frame } from '../shared/Frame';
 import styles from './number-field.module.css';
-import { Frame } from './shared/shared';
 
 export default function NumberFieldDemo() {
   const id = React.useId();

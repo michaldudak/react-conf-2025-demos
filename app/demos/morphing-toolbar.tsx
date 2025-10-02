@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { Popover } from '@base-ui-components/react/popover';
 import { Avatar } from '@base-ui-components/react/avatar';
-import styles from './toolbar.module.css';
-import { Frame } from './shared/shared';
-
-const demoPopover = Popover.createHandle<React.ComponentType>();
+import { Frame } from '../shared/Frame';
+import { demoPopover } from './morphing-toolbar-shared';
+import styles from './morphing-toolbar.module.css';
 
 export default function MorphingToolbarDemo() {
   return (

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Select } from '@base-ui-components/react/select';
-import styles from './select.module.css';
-import { Frame } from './shared/shared';
+import { Frame } from '../shared/Frame';
+import styles from './select-modes.module.css';
 
 const fonts = [
   { label: 'Select a library', value: null },

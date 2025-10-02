@@ -1,7 +1,6 @@
-import * as React from 'react';
 import { Dialog } from '@base-ui-components/react/dialog';
+import { Frame } from '../shared/Frame';
 import styles from './dialog.module.css';
-import { Frame } from './shared/shared';
 
 export default function DialogsDemo() {
   return (
