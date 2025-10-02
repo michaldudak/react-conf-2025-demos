@@ -5,6 +5,8 @@ import { Frame } from '../shared/Frame';
 import { demoPopover } from './morphing-toolbar-shared';
 import styles from './morphing-toolbar.module.css';
 
+const BASE_PATH = import.meta.env.BASE_URL ?? '/';
+
 export default function MorphingToolbarDemo() {
   return (
     <Frame>
@@ -85,7 +87,12 @@ function HistoryPanel() {
       <ol>
         <li>
           <Avatar.Root className={styles.Avatar}>
-            <Avatar.Image src="/md.jpg" width="48" height="48" className={styles.AvatarImage} />
+            <Avatar.Image
+              src={BASE_PATH + 'md.jpg'}
+              width="48"
+              height="48"
+              className={styles.AvatarImage}
+            />
           </Avatar.Root>
           <p>
             <span className={styles.UserName}>Michał Dudak</span> created this document{' '}
@@ -94,7 +101,12 @@ function HistoryPanel() {
         </li>
         <li>
           <Avatar.Root className={styles.Avatar}>
-            <Avatar.Image src="/ct.jpg" width="48" height="48" className={styles.AvatarImage} />
+            <Avatar.Image
+              src={BASE_PATH + 'ct.jpg'}
+              width="48"
+              height="48"
+              className={styles.AvatarImage}
+            />
           </Avatar.Root>
           <p>
             <span className={styles.UserName}>Colm Tuite</span> approved{' '}

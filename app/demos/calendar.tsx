@@ -4,6 +4,8 @@ import { eventPopover, type EventData } from './calendar-shared';
 import { Ellipsis, X } from 'lucide-react';
 import styles from './calendar.module.css';
 
+const BASE_PATH = import.meta.env.BASE_URL ?? '/';
+
 const events: EventData[] = [
   {
     title: 'React Conf 2025 talk',
@@ -12,7 +14,7 @@ const events: EventData[] = [
     endTime: 15.5833,
     dateString: 'October 7, 2025',
     location: 'The Westin Lake Las Vegas Resort & Spa, Main Stage',
-    mapId: '/westin.png',
+    mapId: 'westin.png',
     id: 1,
   },
   {
@@ -22,7 +24,7 @@ const events: EventData[] = [
     endTime: 17,
     dateString: 'October 8, 2025',
     location: 'The Westin Lake Las Vegas Resort & Spa, MUI booth',
-    mapId: '/westin.png',
+    mapId: 'westin.png',
     id: 2,
   },
   {
@@ -148,7 +150,11 @@ function EventDetails() {
                 )}
                 {payload.mapId && (
                   <div className={styles.EventMapWrapper}>
-                    <img src={payload.mapId} alt={payload.location} className={styles.EventMap} />
+                    <img
+                      src={BASE_PATH + payload.mapId}
+                      alt={payload.location}
+                      className={styles.EventMap}
+                    />
                   </div>
                 )}
               </Popover.Popup>
