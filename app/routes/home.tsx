@@ -29,12 +29,15 @@ function titleFromSlug(slug: string) {
 export default function Home() {
   return (
     <main className="pt-16 p-4 container mx-auto max-w-2xl">
-      <h1 className="text-3xl mb-6">Component Demos</h1>
+      <h1 className="text-3xl mb-1">React Conf 2025: The invisible craft of great UX</h1>
+      <h2 className="text-xl mb-3">Demos</h2>
 
-      <ul className="space-y-2 list-none pl-5">
+      <hr className="mb-4" />
+
+      <ul className="space-y-2 list-none p-0">
         {demos.map((slug) => (
           <li key={slug}>
-            <Link className="text-blue-600 hover:underline" to={`/demos/${slug}`}>
+            <Link className="hover:underline" to={`/demos/${slug}`}>
               {titleFromSlug(slug)}
             </Link>
           </li>
