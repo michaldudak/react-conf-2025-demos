@@ -1,8 +1,8 @@
 import { Popover } from '@base-ui-components/react';
 import styles from './calendar.module.css';
-import { Frame } from './shared';
 import { eventPopover, type EventData } from './calendar-shared';
 import { Ellipsis, X } from 'lucide-react';
+import React from 'react';
 
 const events: EventData[] = [
   {
@@ -39,25 +39,57 @@ const events: EventData[] = [
 export default function CalendarDemo() {
   return (
     <div className={styles.Page}>
-      <div className={styles.Calendar}>
-        <div className={styles.HourLabels}>
-          {[...Array(24)].map((_, i) => (
-            <div key={i} style={{ '--hour': i } as React.CSSProperties}>
-              {i}:00
-            </div>
-          ))}
-        </div>
-        {events.map((event) => (
-          <Event key={event.id} event={event} />
-        ))}
-      </div>
-      <EventDetails />
+      <Calendar startHour={6} endHour={22} events={events} />
     </div>
   );
 }
 
-function Event(props: { event: EventData }) {
-  const { event } = props;
+interface CalendarProps {
+  startHour?: number;
+  endHour?: number;
+  events: EventData[];
+}
+
+function Calendar(props: CalendarProps) {
+  const { startHour = 0, endHour = 24, events } = props;
+  const hoursShown = endHour - startHour;
+
+  return (
+    <React.Fragment>
+      <div
+        className={styles.Calendar}
+        style={{ '--hours-shown': hoursShown } as React.CSSProperties}
+      >
+        <div className={styles.HourLabels}>
+          {[...Array(hoursShown)].map((_, i) => (
+            <div key={i} style={{ '--hour': i } as React.CSSProperties}>
+              {startHour + i}:00
+            </div>
+          ))}
+        </div>
+        {events.map((event) => (
+          <Event
+            key={event.id}
+            event={event}
+            calendarStartHour={startHour}
+            calendarEndHour={endHour}
+          />
+        ))}
+      </div>
+      <EventDetails />
+    </React.Fragment>
+  );
+}
+
+interface EventProps {
+  event: EventData;
+  calendarStartHour: number;
+  calendarEndHour: number;
+}
+
+function Event(props: EventProps) {
+  const { event, calendarStartHour, calendarEndHour } = props;
+  const hoursShown = calendarEndHour - calendarStartHour;
 
   return (
     <Popover.Trigger
@@ -65,8 +97,8 @@ function Event(props: { event: EventData }) {
       className={styles.Event}
       payload={event}
       style={{
-        top: `${(event.startTime - 6) * (100 / 24)}%`,
-        height: `${(event.endTime - event.startTime) * (100 / 24)}%`,
+        top: `${(event.startTime - calendarStartHour) * (100 / hoursShown)}%`,
+        height: `${(event.endTime - event.startTime) * (100 / hoursShown)}%`,
         gridColumn: event.dayOfWeek,
       }}
       render={<div />}

@@ -17,7 +17,7 @@
   background-image:
     linear-gradient(to right, #303030 1px, transparent 1px),
     linear-gradient(to bottom, #161616 1px, transparent 1px);
-  background-size: calc(100% / 5) calc(100% / 24);
+  background-size: calc(100% / 5) calc(100% / var(--hours-shown));
 }
 
 .HourLabels {
@@ -32,7 +32,7 @@
   color: var(--color-gray-500);
   pointer-events: none;
   display: grid;
-  grid-template-rows: repeat(24, 1fr);
+  grid-template-rows: repeat(var(--hours-shown), 1fr);
 }
 
 .Event {
@@ -43,7 +43,7 @@
   background-color: rebeccapurple;
   background: linear-gradient(135deg, rebeccapurple, indigo);
   padding: 4px;
-  min-height: calc(100% / 24 * 0.5);
+  min-height: calc(100% / var(--hours-shown) * 0.5);
   font-size: 0.875rem;
   user-select: none;
   box-shadow:
