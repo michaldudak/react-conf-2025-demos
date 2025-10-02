@@ -100,6 +100,7 @@
 }
 
 .EventDetails {
+  position: relative;
   box-sizing: border-box;
   padding: 1rem 1.5rem 1.5rem;
   border-radius: 0.5rem;
@@ -107,6 +108,8 @@
   color: var(--color-gray-900);
   transform-origin: var(--transform-origin);
   z-index: 20;
+  overflow: clip;
+
   transition-property: width, height, transform, opacity;
   transition-timing-function: ease-out;
   transition-duration: 150ms;
