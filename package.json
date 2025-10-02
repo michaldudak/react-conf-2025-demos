@@ -12,19 +12,19 @@
     "@base-ui-components/react": "https://pkg.pr.new/mui/base-ui/@base-ui-components/react@a5f4cb6",
     "@base-ui-components/utils": "https://pkg.pr.new/mui/base-ui/@base-ui-components/utils@a5f4cb6",
     "lucide-react": "^0.544.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-router": "^7.9.2"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router": "^7.9.3"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.14",
     "@types/node": "^22",
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
     "prettier": "^3.6.2",
-    "tailwindcss": "^4.1.13",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.7",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.8",
     "vite-tsconfig-paths": "^5.1.4"
   }
 }
