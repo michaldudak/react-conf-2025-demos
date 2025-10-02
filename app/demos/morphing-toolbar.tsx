@@ -1,4 +1,3 @@
-'use client';
 import * as React from 'react';
 import { Popover } from '@base-ui-components/react/popover';
 import { Avatar } from '@base-ui-components/react/avatar';
@@ -7,7 +6,7 @@ import { Frame } from './shared/shared';
 
 const demoPopover = Popover.createHandle<React.ComponentType>();
 
-export default function PopoverDetachedTriggersFullDemo() {
+export default function MorphingToolbarDemo() {
   return (
     <Frame>
       <div className={styles.Container}>

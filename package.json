@@ -3,24 +3,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "build": "vite build",
+    "dev": "vite dev",
+    "preview": "vite preview",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@base-ui-components/react": "https://pkg.pr.new/mui/base-ui/@base-ui-components/react@a5f4cb6",
     "@base-ui-components/utils": "https://pkg.pr.new/mui/base-ui/@base-ui-components/utils@a5f4cb6",
-    "@react-router/node": "^7.9.2",
-    "@react-router/serve": "^7.9.2",
-    "isbot": "^5.1.31",
     "lucide-react": "^0.544.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router": "^7.9.2"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.9.2",
     "@tailwindcss/vite": "^4.1.13",
     "@types/node": "^22",
     "@types/react": "^19.1.13",

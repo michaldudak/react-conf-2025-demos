@@ -3,7 +3,7 @@ import { Tooltip } from '@base-ui-components/react/tooltip';
 import styles from './tooltip.module.css';
 import { Frame } from './shared/shared';
 
-export default function ExampleTooltip() {
+export default function TooltipDemo() {
   return (
     <Frame>
       <Tooltip.Provider>

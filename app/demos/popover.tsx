@@ -3,7 +3,7 @@ import { Popover } from '@base-ui-components/react/popover';
 import styles from './popover.module.css';
 import { Frame } from './shared/shared';
 
-export default function ExamplePopover() {
+export default function PopoverDemo() {
   return (
     <Frame>
       <Popover.Root>

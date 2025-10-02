@@ -1,14 +1,24 @@
-import { type RouteConfig, index, route } from '@react-router/dev/routes';
+import CalendarDemo from './demos/calendar';
+import DialogsDemo from './demos/dialogs';
+import MenuInteractionsDemo from './demos/menu-interactions';
+import MorphingToolbarDemo from './demos/morphing-toolbar';
+import NumberFieldDemo from './demos/number-field';
+import PopoverDemo from './demos/popover';
+import SelectModesDemo from './demos/select-modes';
+import TooltipDemo from './demos/tooltip';
+
+type RouteData = {
+  path: string;
+  component: React.ComponentType;
+};
 
 export default [
-  index('routes/home.tsx'),
-  // Demo routes mapped from files in app/demos
-  route('demos/calendar', 'demos/calendar.tsx'),
-  route('demos/dialogs', 'demos/dialogs.tsx'),
-  route('demos/menu-interactions', 'demos/menu-interactions.tsx'),
-  route('demos/morphing-toolbar', 'demos/morphing-toolbar.tsx'),
-  route('demos/number-field', 'demos/number-field.tsx'),
-  route('demos/popover', 'demos/popover.tsx'),
-  route('demos/select-modes', 'demos/select-modes.tsx'),
-  route('demos/tooltip', 'demos/tooltip.tsx'),
-] satisfies RouteConfig;
+  { path: 'demos/calendar', component: CalendarDemo },
+  { path: 'demos/dialogs', component: DialogsDemo },
+  { path: 'demos/menu-interactions', component: MenuInteractionsDemo },
+  { path: 'demos/morphing-toolbar', component: MorphingToolbarDemo },
+  { path: 'demos/number-field', component: NumberFieldDemo },
+  { path: 'demos/popover', component: PopoverDemo },
+  { path: 'demos/select-modes', component: SelectModesDemo },
+  { path: 'demos/tooltip', component: TooltipDemo },
+] satisfies RouteData[];

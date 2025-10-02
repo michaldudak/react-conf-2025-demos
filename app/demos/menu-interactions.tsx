@@ -1,11 +1,9 @@
-'use client';
-
 import * as React from 'react';
 import { Menu } from '@base-ui-components/react/menu';
 import styles from './menu.module.css';
 import { Frame } from './shared/shared';
 
-export default function ExampleMenu() {
+export default function MenuInteractionsDemo() {
   return (
     <Frame>
       <Menu.Root>

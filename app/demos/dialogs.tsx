@@ -3,7 +3,7 @@ import { Dialog } from '@base-ui-components/react/dialog';
 import styles from './dialog.module.css';
 import { Frame } from './shared/shared';
 
-export default function ExampleDialog() {
+export default function DialogsDemo() {
   return (
     <Frame>
       <Dialog.Root>

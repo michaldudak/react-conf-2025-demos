@@ -1,11 +1,9 @@
-'use client';
-
 import * as React from 'react';
 import { NumberField } from '@base-ui-components/react/number-field';
 import styles from './number-field.module.css';
 import { Frame } from './shared/shared';
 
-export default function ExampleNumberField() {
+export default function NumberFieldDemo() {
   const id = React.useId();
   return (
     <Frame>

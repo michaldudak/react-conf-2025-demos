@@ -12,7 +12,7 @@ const fonts = [
   { label: 'React Aria Components', value: 'react-aria' },
 ];
 
-export default function ExampleSelect() {
+export default function SelectModesDemo() {
   return (
     <Frame className="gap-24">
       <StyledSelect />
