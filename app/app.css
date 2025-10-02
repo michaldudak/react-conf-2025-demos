@@ -24,8 +24,6 @@
 @import 'tailwindcss/theme' layer(theme);
 @import 'tailwindcss/utilities' layer(utilities);
 
-@import './breakpoints.css';
-
 /* Handy link to the default Tailwind theme:
 /* https://github.com/tailwindlabs/tailwindcss/blob/next/packages/tailwindcss/theme.css */
 
