@@ -14,10 +14,19 @@
   grid-template-rows: 1fr;
   column-gap: 3px;
 
-  background-image:
-    linear-gradient(to right, #303030 1px, transparent 1px),
-    linear-gradient(to bottom, #161616 1px, transparent 1px);
   background-size: calc(100% / 5) calc(100% / var(--hours-shown));
+
+  @media (prefers-color-scheme: light) {
+    background-image:
+      linear-gradient(to right, #d5d5d5 1px, transparent 1px),
+      linear-gradient(to bottom, #e2e2e2 1px, transparent 1px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-image:
+      linear-gradient(to right, #303030 1px, transparent 1px),
+      linear-gradient(to bottom, #161616 1px, transparent 1px);
+  }
 }
 
 .HourLabels {
@@ -49,6 +58,10 @@
   box-shadow:
     0.5px 1px 0.5px rgba(255, 255, 255, 0.2) inset,
     -0.5px -1px 1px rgba(0, 0, 0, 1) inset;
+
+  @media (prefers-color-scheme: light) {
+    color: var(--color-gray-50);
+  }
 
   &:hover {
     background: linear-gradient(135deg, rgb(107, 64, 151), indigo);
