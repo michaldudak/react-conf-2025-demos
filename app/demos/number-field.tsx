@@ -8,7 +8,7 @@ export default function NumberFieldDemo() {
   return (
     <Frame>
       <NumberField.Root id={id} defaultValue={100} className={styles.Field}>
-        <NumberField.ScrubArea className={styles.ScrubArea}>
+        <NumberField.ScrubArea className={styles.ScrubArea} teleportDistance={100}>
           <label htmlFor={id} className={styles.Label}>
             Amount
           </label>

@@ -59,7 +59,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow-x: clip;
   color: var(--color-foreground);
   word-break: break-word;
 }
